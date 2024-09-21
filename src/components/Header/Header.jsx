@@ -29,10 +29,10 @@ const Header = () => {
           nextEl: null,
         }}
         pagination={{
-          el: ".swiper-pagination", // Custom pagination container
+          el: ".swiper-pagination", 
           clickable: true,
-          bulletClass: "custom-bullet", // Custom bullet class
-          bulletActiveClass: "custom-bullet-active", // Custom active bullet class
+          bulletClass: "custom-bullet", 
+          bulletActiveClass: "custom-bullet-active", 
         }}
         onInit={(swiper) => {
           swiper.params.navigation.prevEl = prevRef.current;
