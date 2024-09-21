@@ -1,0 +1,110 @@
+@import "../../src/styles/mixins.scss";
+
+@import "../../src/styles//variables.scss";
+
+.pricingPlan {
+  width: 100%;
+  display: grid;
+  background: $dark-bg;
+  justify-content: center;
+  padding-top: 154.5px;
+  padding-bottom: 140px;
+
+  .pricingPlan__container {
+    display: grid;
+    grid-template-columns: 170px 1100px 170px;
+    justify-self: center;
+
+    h1 {
+      @include textStyle(49.25px, 500, $text-light, 66px);
+      width: 305px;
+      height: 66px;
+      display: grid;
+      align-content: center;
+      grid-column: 2/3;
+      margin-bottom: 43.5px;
+    }
+
+    .pricingPlan__list {
+      display: flex;
+      gap: 47px;
+      grid-column: 2/3;
+    }
+  }
+}
+
+.pricing__item {
+  color: $text-light;
+  display: grid;
+  padding-top: 52px;
+  padding-bottom: 36px;
+  border-top: 2px solid $border;
+  border-bottom: 2px solid $border;
+  h2 {
+    @include textStyle(19.52px, 600, $text-light, 28px);
+    margin-bottom: 21px;
+  }
+
+  .price__container {
+    display: flex;
+    height: 54.5;
+    margin-bottom: 22px;
+    gap: 10px;
+    .price {
+      @include textStyle(50.41px, 500, $text-light, 54px);
+      align-self: center
+    }
+
+    .month {
+      @include textStyle(10.48px, 600, $text-light, 18px, 1.1px);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+  }
+
+  .description {
+    @include textStyle(14px, 400, $text-light, 24px);
+    margin-bottom: 33px;
+  }
+
+  .features {
+    display: grid;
+    justify-content: start;
+    justify-items: start;
+    row-gap: 10px;
+    margin: 0;
+    margin-bottom: 30px;
+    @include textStyle(16.17px, 400, $text-light, 28px);
+
+    .feature {
+      position: relative;
+      padding-left: 24px;
+      min-height: 28px;
+      display: grid;
+      align-content: center;
+      &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $text-light;
+        display: inline-block;
+        margin-right: 10px;
+        position: absolute;
+        left: 0px;
+        top: 11.5px;
+      }
+    }
+  }
+
+  .promotion {
+    width: 280px;
+    margin-bottom: 46px;
+    @include textStyle(14px, 400, $text-light, 24px);
+  }
+
+  .subscribe__button {
+    @include button(218px, 64px, $text, $btn-bg, 0px);
+    @include textStyle(15.8px, 600, $text, 19.01px);
+  }
+}

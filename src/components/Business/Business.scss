@@ -1,0 +1,26 @@
+@import "../../styles/mixins.scss";
+
+@import "../../styles/variables.scss";
+
+.business {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  margin-top: 110px;
+}
+
+
+
+.business__container {
+  display: grid;
+  grid-template-columns: 40px 1360px 40px;
+}
+
+
+
+.business__list{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 40px;
+  grid-column: 2/3;
+}

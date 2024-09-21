@@ -1,0 +1,30 @@
+@import "../../styles/mixins.scss";
+
+@import "../../styles/variables.scss";
+
+
+.features {
+ width: 100%;
+ display: grid;
+ justify-items: center;
+ justify-content: center;
+ margin-top: 100px;
+ margin-bottom: 100px;
+
+  .features__container{
+
+    display: grid;
+    grid-template-columns: 170px 1100px 170px;
+
+    .features__content{
+      grid-column: 2/3;
+      
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .feature__image{
+        width: 550px;
+        object-fit: cover;
+      }
+    }
+  }
+}

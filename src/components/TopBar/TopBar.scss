@@ -1,0 +1,57 @@
+@import "../../styles/mixins.scss";
+
+@import "../../styles/variables.scss";
+
+.topbar {
+  width: 100%;
+  display: grid;
+  height: 33px;
+  align-items: center;
+  background: $header-bg;
+
+  .topbar__container {
+    display: grid;
+    grid-template-columns: 40px 1360px 40px;
+    justify-self: center;
+
+    .topbar__list {
+      display: flex;
+      width: 100%;
+      justify-self: center;
+      justify-content: space-between;
+      grid-column: 2/3;
+
+      .list__group{
+        display: flex;
+      }
+
+      .group--first{
+        gap: 120px;
+      }
+
+      .group--second{
+        gap: 40px;
+      }
+    }
+  }
+}
+
+.list__item {
+  .item__container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $text-muted;
+      display: inline-block
+    }
+
+    .text {
+      @include textStyle(10.31px, 600, $text-muted, 18px, 0.28px);
+      text-transform: uppercase;
+    }
+  }
+}

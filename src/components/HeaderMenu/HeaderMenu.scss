@@ -1,0 +1,65 @@
+@import "../../styles/mixins.scss";
+
+@import "../../styles/variables.scss";
+
+
+.header__menu {
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  display: grid;
+  justify-content: center;
+  height: 80px;
+  align-items: center;
+  border-bottom: 2px solid $border-more-transparent;
+  .menu__container {
+
+    display: grid;
+    grid-template-columns: 130px 1180px 130px;
+
+    .menu__content{
+      grid-column: 2/3;
+      display: flex;
+      column-gap: 75px;
+      align-items: center;
+      height: 40px;
+    }
+  }
+}
+
+.logo{
+
+}
+
+.menu__list{
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 515px;
+  justify-content: space-between;
+
+  .menu__item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    
+    &.active {
+      .dot {
+        background-color: $text-light;
+      }
+    }
+
+    .dot{
+      width: 5px;
+      height: 5px;
+      background-color: transparent;
+      border-radius: 50%;
+
+    }
+
+    a{
+      @include textStyle(14.3px, 500, $text-light, 19.05px, 0.38px);
+    }
+  }
+}

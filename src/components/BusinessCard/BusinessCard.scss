@@ -1,0 +1,50 @@
+@import "../../styles/mixins.scss";
+
+@import "../../styles/variables.scss";
+
+.business__card {
+  width: 310px;
+  display: grid;
+
+  row-gap: 26px;
+  .business__image{
+    height: 418px;
+    width: 100%;
+
+    object-fit: cover;
+
+    position: relative;
+
+    .plus {
+      width: 64px;
+      height: 64px;
+      background-color: $text-light;
+      position: absolute;
+      display: grid;
+      place-content: center;
+      top: calc(100% - 63px);
+      left: calc(100% - 64px);
+      cursor: pointer;
+    }
+  }
+
+  .business__content{
+    height: 100px;
+    border-bottom: 2px solid $border;
+    display: grid;
+    align-items: start;
+    align-content: start;
+
+    .business__type{
+      @include textStyle(10.48px, 600, $text, 18px, 1.1px);
+      height: 18px;
+      display: grid;
+      align-items: center;
+      text-transform: uppercase;
+    }
+
+    .business__title{
+      @include textStyle(19.52px, 600, $text, 28px);
+    }
+  }
+}

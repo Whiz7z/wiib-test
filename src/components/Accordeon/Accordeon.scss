@@ -1,0 +1,53 @@
+@import "../../styles/mixins.scss";
+
+@import "../../styles/variables.scss";
+
+.accordeon {
+  height: auto;
+}
+
+.accordeon__item {
+  border-bottom: 2px solid $border;
+  display: grid;
+  align-items: center;
+  padding-left: 40px;
+  min-height: 98px;
+  align-content: center;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 98px;
+    align-content: center;
+    cursor: pointer;
+    h2 {
+      @include textStyle(49.78px, 500, $text, 66px);
+    }
+
+    .plus{
+      margin-right: 24.5px;
+      margin-top: 2px;
+    }
+  }
+
+  .content {
+    display: grid;
+    row-gap: 20px;
+    width: 423px;
+    @include textStyle(16.17px, 400, $text, 28px);
+  }
+
+  &.active {
+    padding: 14.75px 0 80px 40px;
+
+    .title {
+      .plus {
+        transform: translateY(68px);
+        
+      }
+    }
+    .content {
+      margin-top: 7.25px;
+    }
+  }
+}
